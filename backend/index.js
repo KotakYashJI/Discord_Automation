@@ -1,6 +1,6 @@
 import { Client, GatewayIntentBits } from "discord.js"
 import dotenv from "dotenv"
-import { textgenerator } from "./services/ai.service.js";
+import { textgenerator } from "./src/services/ai.service.js";
 
 dotenv.config();
 

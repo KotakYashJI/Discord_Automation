@@ -10,7 +10,13 @@ const ai = new GoogleGenAI({
 export const textgenerator = async (content) => {
     const response = await ai.models.generateContent({
         model: "gemini-2.0-flash",
-        contents: content
+        contents: content,
+        config: {
+            systemInstruction: `
+            - user ask questyion generate properly
+            - always generate answer within 300 words
+            `
+        }
     });
     return response.text;
 }
